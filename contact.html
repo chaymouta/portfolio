@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Projet Déploiement WEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Déploiement WEB</h1>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="cv.html">Mon CV</a></li>
+                <li><a href="activities.html">Activités</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form id="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Chebbi Chaima. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Nouveau lien pour EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    <script>
+        // Initialiser EmailJS avec la clé publique
+        emailjs.init('BQfKabwOLy8_BZ6fK'); // Remplacez par votre clé publique EmailJS
+
+        // Capturer le formulaire
+        const form = document.getElementById('contact-form');
+
+        // Gérer l'événement "submit" du formulaire
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Empêche l'envoi par défaut du formulaire
+
+            // Récupérer les données du formulaire
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Envoyer les données via EmailJS
+            emailjs
+                .send('service_akgn3k4', 'template_kddrejf', {
+                    user_name: name,
+                    user_email: email,
+                    user_message: message,
+                })
+                .then(
+                    function (response) {
+                        alert('Message envoyé avec succès ! Merci pour votre contact.');
+                        form.reset(); // Réinitialiser le formulaire
+                    },
+                    function (error) {
+                        alert('Erreur lors de l\'envoi du message : ' + error.text);
+                    }
+                );
+        });
+    </script>
+</body>
+</html>

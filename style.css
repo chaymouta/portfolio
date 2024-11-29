@@ -1,0 +1,245 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+header .navbar ul li {
+    margin: 0 10px;
+}
+
+header .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header .navbar ul li a:hover {
+    color: #f39c12;
+}
+
+/* Section Hero */
+#hero {
+    background-image: url('images/flow.jpg') ; /* Remplacez par votre image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+#hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #e74c3c; /* Couleur du bouton */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour lisibilité */
+}
+
+#hero h2:hover {
+    color: #c0392b; /* Couleur légèrement plus foncée au survol */
+    transition: color 0.3s;
+}
+
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#hero button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#hero button:hover {
+    background-color: #c0392b;
+}
+
+/* Sections générales */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+section p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+/* CV Section */
+#cv a.button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#cv a.button:hover {
+    background-color: #2980b9;
+}
+
+/* Activités */
+#activities .activities-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#activities .activity {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#activities .activity:hover {
+    transform: translateY(-5px);
+}
+
+#activities h3 {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Formulaire de contact */
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+#contact form label {
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #34495e;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact form button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+    background-color: #1e8449;
+}
+
+/* Pied de page */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+/* Section activités */
+#activities .activities-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#activities .activity {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+#activities .activity img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#activities .activity h3 {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+#activities .activity p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+#activities .activity:hover {
+    transform: translateY(-5px);
+}
